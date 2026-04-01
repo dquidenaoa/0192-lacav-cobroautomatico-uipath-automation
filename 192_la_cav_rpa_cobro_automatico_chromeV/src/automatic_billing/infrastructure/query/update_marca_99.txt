@@ -1,0 +1,4 @@
+update proceso_cobro.nomina
+set estado=6
+where tc_marca = 99
+and estado=1

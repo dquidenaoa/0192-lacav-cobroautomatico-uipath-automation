@@ -1,0 +1,18 @@
+INSERT INTO 
+	proceso_cobro.historial_info(
+		id_nomina,
+		pos_respuesta, 
+		tc_cod_resp, 
+		tc_mot_rech, 
+		tc_cod_aut,
+		tc_fecha
+	)
+VALUES 
+	(
+		'{0}', 
+		'{1}', 
+		'{2}', 
+		'{3}', 
+		'{4}',
+		'{5}'
+	);

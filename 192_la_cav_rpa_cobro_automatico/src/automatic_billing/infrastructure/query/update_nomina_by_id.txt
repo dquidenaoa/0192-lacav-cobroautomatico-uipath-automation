@@ -1,0 +1,6 @@
+UPDATE proceso_cobro.nomina
+SET 
+	estado = {1},
+  updated_at = LOCALTIMESTAMP
+WHERE 
+	id = {0}

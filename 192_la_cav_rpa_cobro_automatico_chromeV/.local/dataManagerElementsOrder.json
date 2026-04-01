@@ -1,0 +1,684 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "nomina&StateMachine_1",
+        "repeat&State_4",
+        "boolResumen&Sequence_14",
+        "dtimResume&Sequence_14",
+        "path&Sequence_14",
+        "path_userProfile&Sequence_14",
+        "listType&Sequence_14",
+        "filepath_resumen&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/Case.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "row",
+        "repeat"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/CaseProcess.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "nomina_tipo_nombre&StateMachine_1",
+        "info_nomina&StateMachine_1",
+        "browserExists&TryCatch_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status",
+        "case_row"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/navegation/navegation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/shared/navegation/application/click_vcc_ventas.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/login/Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "web&StateMachine_1",
+        "error_count&StateMachine_1",
+        "web_error_exists&State_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "account_type",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/login/PutCredentials.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "web",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/login/ValidateSession.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_count",
+        "error_status",
+        "error_message",
+        "web_error_exists"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/login/CloseSuccessLogin.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/shared/web/maximize_browser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/shared/navegation/application/click_vta_call_center.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/CreditCard.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status",
+        "case_row",
+        "info_nomina"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/FirstState.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/SelectionMarca.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/SelectionMarcaExtra.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "case_row"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/InsertTcNumero.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/InsertTCFecha.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/InsertTCMonto.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/InsertNBoleta.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/firstState/ClickContinuarFirstState.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/validateState/ValidateStateFirst.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "validateType&Sequence_1",
+        "validateError&Sequence_1",
+        "validateNumberType&Sequence_1",
+        "validateAmount&Sequence_1",
+        "validateDate&Sequence_1",
+        "validateCreditNumber&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "info_nomina",
+        "error_status",
+        "error_message",
+        "case_row"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/secondState/SecondState.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "instalments&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "case_row",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/secondState/InstalmentsEquals3.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "instalments"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/secondState/InstalmentsCountMuch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "instalments",
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/secondState/InstalmentsEquals1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "instalments",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/secondState/ClickContinuarSecondState.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/CloseBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/validateState/ValidateStateSecond.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "validateError&Sequence_5",
+        "validateQuotas&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "info_nomina",
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/validateState/CreateRechazadoByValidate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "info_nomina",
+        "case_row",
+        "error_status",
+        "error_message",
+        "validateError"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/thirdState/ThirdState.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "POS_RESPUESTA&State_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "case_row",
+        "error_message",
+        "info_nomina"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/infrastructure/module/InsertHistorialInfo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "info_nomina",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/infrastructure/module/UpdateNominaByCount.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "update_id",
+        "update_estado",
+        "update_count"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/login/OpenBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "web",
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/thirdState/GetDataRechazado.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "info_nomina",
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/application/creditCard/thirdState/GetDataAprobada.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "info_nomina",
+        "case_row",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/Resume.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_types&StateMachine_1",
+        "resumen&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "resumen_name",
+        "path",
+        "resumen_day"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/resume_type_case.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "web&StateMachine_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "type_number",
+        "resumen"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/login/login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "error_count&StateMachine_1",
+        "web_error_exists&State_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status",
+        "web"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/infrastructure/module/GetTypesToday.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "query_template&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status",
+        "dt_types"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/login/SelectTypeByNumber.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "type_number",
+        "error_status",
+        "error_message",
+        "web"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/navegation/navegation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/shared/navegation/application/click_vcc_ventas_por_usuario.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/download.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_validation&State_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status",
+        "resumen"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/fecha_venta_desde.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "resumen",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/fecha_venta_hasta.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "resumen",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/buscar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/validation_no_registros.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message",
+        "bool_no_registros"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/guardar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/move/move.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "resumen",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/resumen/application/download/close_browser_instructions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/shared/web/close_browser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "src/automatic_billing/infrastructure/module/GetNomina.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "query_template&Sequence_3",
+        "intRowsChange&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "nomina",
+        "error_status",
+        "error_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

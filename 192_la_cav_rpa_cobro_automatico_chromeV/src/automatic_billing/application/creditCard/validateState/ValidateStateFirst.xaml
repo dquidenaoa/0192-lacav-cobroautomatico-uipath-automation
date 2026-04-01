@@ -1,0 +1,530 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ValidateStateFirst" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="info_nomina" Type="OutArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="error_status" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="error_message" Type="OutArgument(x:String)" />
+    <x:Property Name="case_row" Type="InArgument(sd:DataRow)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>552,3628</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="562,3563" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch.Try>
+      <Sequence DisplayName="Validate State First Process" sap:VirtualizedContainerService.HintSize="560,3049" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:Boolean" Name="validateType" />
+          <Variable x:TypeArguments="x:String" Name="validateError" />
+          <Variable x:TypeArguments="x:Boolean" Name="validateNumberType" />
+          <Variable x:TypeArguments="x:Boolean" Name="validateAmount" />
+          <Variable x:TypeArguments="x:Boolean" Name="validateDate" />
+          <Variable x:TypeArguments="x:Boolean" Name="validateCreditNumber" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Debe seleccionar un tipo de tarjeta de credito" sap:VirtualizedContainerService.HintSize="526,553" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="Debe seleccionar un tipo de tarjeta de credito" sap:VirtualizedContainerService.HintSize="436,139" sap2010:WorkflowViewState.IdRef="ImageFound_5">
+            <ui:ImageFound.Found>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_63">validateType</CSharpReference>
+              </OutArgument>
+            </ui:ImageFound.Found>
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQMAAAAVCAYAAABCKYv5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOcSURBVHhe7ZjdbeswDIXvELcvXSh96CgGsk6QWdLukiyiipJsH0kkTSexcXPLDwhgyeLhjxxGzp/gOI4T8WbgOE7Cm4HjOAlvBo7jJLwZOI6T8GbgOE5iRTP4DsPf9/AGn4/TrdzTILvPcLqW4aZs4Ot6Dh+7xb8xm+ey017vtic75HM5hrfDOfAuwP8OOa9sBhgMjWNTGL7LWGKnBySxp69XYO96rPW3ZXzP0N66flFfbASE5H+buB5oBpHUrY7hqwx5ti4osqevV2Dveqz1t2V8z9DeuH7Xm9IICMn/NnE91gzCLZwO72G4lGFqDuNrxNgkit1lvle9XrA2SPYxvpqYfI0xitqCJjuvaaJtWXeKx75yD/P8Gmab+TSVbYbhM863uTd+q7HuK0NrWp+MhmlfMM8GWPdxOoN+fY/Pb9Yfa2KrE+YR6fys0W64O58R+Rmq9lnSEv2POfO51XrKfik8sRk09+O7UH64SvDjcSgF3SZI15HJBqB3qm7jNF9L2jnmzo8432pCobtcYHMobvaB6fV6nwSuI3q7db4IRkPcFylPpF53PdHDjhpgM9UfadZU4L3sZ7Zv73F+rNpI9nN/PtozJMUfqWK2+G/sGzt5v3Se0AzKXAogd6W6a/V21KFT4KINUNZUBbb4ktakeeaLI813mvWaKZcuz2acvrBjLON8X5sZTW/B18QajXZfpDwBWle984Jm0oDa06fdWy5uU50sfqzawKP5pDWGpixpaf7F6wjjl92vBZ73n4G1EHiaEG16cpdcsgNf0pq18wuapmZQ2UED7WwQRU+9h6zR0PflvmbA1RNpYjDXyeLHqg08ms9dsQCaf/E6wujt3AxojA7zePGIVAUu2fBQQ8DjFO8LC8atyQ+9fb7XnHLucmnrU8b0izRucrJBPbRB4MtJpF81yU7S0dbRNeTL7AufJ1Kv64+1XD0RjCdirhOOJT9WbSRr3Z+P5RkitJg1/9w1UdvJ+6Wzshng0QaDKaQgYA0c1/KfJ3l+CppgbYDqaAcJKr6muETtOpc5Hm5e02w3RBrnhyTZHI5hMJ0MIpj7EO2mtZqvGvqFyPZtffK1bV9sMep/uMVPu7eROj5rnZqx4Mem3fBgPjm2eQ37DBGSlui/1qhzi1j3S2FFM3D+L5gH9GWg2Nf/8jk63gx+LS/cDOjXs3q3dp6BN4Nfyws2g+ko/Konmn8bbwaO4yS8GTiOk/Bm4DhOJIQfVeG0+iGruyIAAAAASUVORK5CYII=" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51f779d1-3ee5-40b5-86f0-045d6c33952f" Selector="&lt;html app='chrome.exe' htmlwindowname='etbk_popup' title='.:::TransBank:::.' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <If DisplayName="If - Debe seleccionar un tipo de tarjeta de credito" sap:VirtualizedContainerService.HintSize="436,322" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">validateType</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_74">validateError</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Debe seleccionar un tipo de tarjeta de credito</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="El numero de la tarjeta no corresponde al tipo" sap:VirtualizedContainerService.HintSize="526,553" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="El numero de la tarjeta no corresponde al tipo" sap:VirtualizedContainerService.HintSize="436,139" sap2010:WorkflowViewState.IdRef="ImageFound_6">
+            <ui:ImageFound.Found>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_69">validateNumberType</CSharpReference>
+              </OutArgument>
+            </ui:ImageFound.Found>
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAcCAYAAABF79LlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN8SURBVHhe7ZhtcuMgDIb3ENs/e6H0R4/imVzHk7OkvUt6Ea8FiAhZYLCdTFreZyYzAfSJkIPzZwIAdAMaHoCOQMMD0BFoeAA6Ag0PQEeg4QHoCDQ8AB2BhgegIwoN/zUNf/9Nb+IzXHn+YxpvTmgD39N4YluvRmtue/eikttlen+GH5DhqDpX2nlgvVca3nK6L/nb+PGizU605vZo+RYeabt3jtrbnJ3n1e75DX/7Dt9ekdbcHi3fwiNt985Re5uz87zaHdjwYX48x1eA95GbW+vIcfh+pWvM/dWBbgJLOzPuusOvGefp0016G8NAOmEukSu8Qgi59/GSxmn6kqR5fQ53f2/Dl5+MkOxy3dbR+aR+lnG12JYEu2bNZmr3MLymLeSy+nZ++frx3lt+Qg7i/NTlUJ97+7ko1zXacdCclpVyW/OzaXiH58SsoIkgz8ldaSNzOnIc9E6XyQ2dnkiqZGde83Lexn0j/Dg9ePmYWc4/ZGRcli+Jkom0zhNyjb7rfOSasJHsQY1tifeTr1nNHvomtPcmp+/XdL3sfGc4R4pv8eDyuvH8GH5KMdTk3n4uJFJe6Ub0vNbZkp/N8b/wcV6Ot64RYuwSmpOXn8UTccbJcfE89MSNG8OQHG+ko8aXRPl1h4blZQ6Mzm3G1NFyNXHV2pas+ancQyXnKOoX/BK5HMN82mDLvKOfrTGQ3q5zMVNVV6YQi6FTl5/ND2x443BpndqNWC2s5UuSk6dfPZkDU4pT6ii5qrhqbUva/GT30IqnqF/wS2Rz9PDrnm3L3zjc2tYYSG/PuUhkSnVlCrEs1mrzs3lSw4sgCff047WSHiHH9D13fdQ6wl+2SKnc8upm+ZIIv5STee2SqDizOkouGefiqrUtWfezvoe+tnY8Of2SX8LrlvaeauXXlezCz5YYUr3mc1FdV2Y9lvb8bBre4dmpDo7R82rsmjzYGs5ibUVPj11SIq7cdTaRU2sSEVf5z5n5U7zS+4Pv5E5zfuYvqn8C323ldLbsQa1tSYsfS58hPZbTB9DSX/FLWDnKM6Qa1//h59eif2JrDLvORW1d76S1k3Jb87MpNDx4Hajo5Sd3v+Sb6HdwbH5o+J+AvCICBRq+BTT8KxOva7/5QO8FDd8CGh6AjkDDA9ARaHgAOgIND0BHoOEB6Ag0PAAdgYYHoCPQ8AB0wzT9Bwkw+ZUQTO9gAAAAAElFTkSuQmCC" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="971d5fff-600f-4c98-a137-47243fb9b103" Selector="&lt;html app='chrome.exe' htmlwindowname='etbk_popup' title='.:::TransBank:::.' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <If DisplayName="If - El numero de la tarjeta no corresponde al tipo" sap:VirtualizedContainerService.HintSize="436,322" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">validateNumberType</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_75">validateError</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">El numero de la tarjeta no corresponde al tipo</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="Monto en pesos debe ser mayor o igual a 500" sap:VirtualizedContainerService.HintSize="526,553" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="Monto en pesos debe ser mayor o igual a 500" sap:VirtualizedContainerService.HintSize="436,139" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+            <ui:ImageFound.Found>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">validateAmount</CSharpReference>
+              </OutArgument>
+            </ui:ImageFound.Found>
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQMAAAAlCAYAAABGU4xUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQqSURBVHhe7ZlhcuMgDIX3EO2fXqj50aN4JtfJ9Cxt75JehEUC2w8ZYXCmm0z3fTOeBiwJIeCFtn8CIYREKAaEEIViQAhRKAaEEIViQAhRKAaEEIViQAhRKAaEEIViQAhRKAaEEIViQAhRKAaEEIViQAhRKAaEEIViQAhRBsTgK0xPL+F5+srtkuvlLTw/vYXLNXeQG5F679Wzx4Y0ub6H04/V8Lb1SWcqnjl9zuEz94eP89J/unznzojX38mgGLyF02ttclkobi4qN/dKTy1Yr8fmtvX5nF7C9JEbCxJzFgaM7/X3MywG0xQFwaqOKNJ0PpRAybFJ/E56asF6PTa3rc9nPGsbXz1r6+1cbg96Hr3+AYbF4HKVn3BlCd/horcFM3G9fs1XHFS4bHexVxrpX+2XiblxDIWdUcjNWJZs97HGKOyqsWXecx/k5ebr2CPge7q8N+pp5jeUN9Izh3Is+TLYxtrmIbHwmot5yTfe3J/WOeVR1EQ29+t70Om7NW3lFHH9kJx7pc7lGhg7097OSbA+K3V7pFybuX6bQ55FwOsf4YAYmOuLFE8XDScun42NebckKknbzb0UrxUHMX4xZipMaywk2xWbD/OtxK4Wu5Fv1R4pfdNB2snhSN6IOwd/rE0MxeQhcdFW217d81gml3WPpditvdTKaWzvlD7NNdi0Z2y8mg0yZvNwYqCFzQtfLhq8N4tftVOwbd414wBqFzcjPlqI1ljItn8Zx4ud+4sFaOVbs0fk/XyYFMjJy+FI3kgtp4GxVuy7nXYWi/TM/WIz1y5+LgSudy8BTT8EYoiPtwabsUzbnRP6AFV7H8ld1unxxECvMPGzXAuX4sH7oQXEtnnXu6AVu0RrLMT2w7XVjZ1I3x6+rc23sEfEtykGPfPrzxvZm0PCq51g3zXaRfy8j7LdvKGLjV3Jx99LQNMPMbkdEQN3Tk5+jRp4LLmbQ77Uyusf4KAYRLKyrQPawkHhi8nbAlk/+86LgyS77eRbYyHGf5NvLfbKWvhku5dvfaFKX7Epv2G8+R3PG7FzqI9Vq51g3zXasm+Kb32wk/brOd4KrG/vXkJafgjGKH3KNQChFXT/53funJz8WjWogTbe/L3+AY6LgRYHi2vea3K1a5CNU7ZFAdVnVjk3jqGwm/3bY62k/vSHqOS/LLpQi53FMD1QBy9fzx4Bm/YfEOMD8xvKG+maw+zn1U7YqzO206HSuJuDn9ff5unVtJlTxPVDTIzWGmC9iv+eeXPy8mvXICG+2SY+xbpCHl39nQyIwW9mZ1ORf0b9Kn8nVEwc4f6FUAwUisFDIIev+J39vugt5YHy+WkoBgrF4L7M1+Z7rwFc3/X5f24FAsWAEKJQDAghCsWAEKJQDAghCsWAEKJQDAghCsWAEKJQDAghCsWAEKJQDAghkRD+AqonZrNr2iBxAAAAAElFTkSuQmCC" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0a0c6420-c924-4c52-bfb2-1aac33d0510e" Selector="&lt;html app='chrome.exe' htmlwindowname='etbk_popup' title='.:::TransBank:::.' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <If DisplayName="If - Monto en pesos debe ser mayor o igual a 500" sap:VirtualizedContainerService.HintSize="436,322" sap2010:WorkflowViewState.IdRef="If_3">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">validateAmount</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_76">validateError</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Monto en pesos debe ser mayor o igual a 500</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="La fecha debe ser posterior al mes actual" sap:VirtualizedContainerService.HintSize="526,553" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="La fecha debe ser posterior al mes actual" sap:VirtualizedContainerService.HintSize="436,139" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+            <ui:ImageFound.Found>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_71">validateDate</CSharpReference>
+              </OutArgument>
+            </ui:ImageFound.Found>
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOYAAAAiCAYAAABLE6UZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN5SURBVHhe7ZjRbeMwDIZviPalCyUPHcVA1gkyS9pd0kVUU5JtUhZpqfH1mMv/AQYiRSJ/kqat5E8AALgDjQmAQ9CYADgEjQmAQ9CYADgEjQmAQ9CYADgEjQmAQ9CYADgEjQmAQ9CYADgEjQmAQ9CYADgEjQmAQ9CYADikozE/w/DyHs63POzlegqvL2/h9XAJ/Sbu9L2ixd7ePh+Y2yUc/1ouni3PbfH+UmPS3rcwXPOwm72L12Jvb58e8BjTI+V5D61tNn6xMe8JaO/itdjb26cHPMb0SHneQ2ubjV0a82MYj6h0TKVr+MyzE7Rv+f54/krT8Xg0zZ/CR5od+Qrnw7I+vWWz7+uyZ7YzYvvPMH/H80XGUtVi+9T1T9TiGDF8DcN7xVaPDn4qKf3LOsx5atKTNVTzxX1acWh1KmzP5HkWN/m5ncl2Gm/XQ6kBQ793WvJXapfjvnglO78xtTV2APT7MyU5JUMkPELrx+Cm36fx9+q68Lb/pTCpuNM6TUvhMxZ+aw+DNIpCE7avddzElg52w/HvWvw36+HrDJ+rfRqlPa5pItmSNWe241g+SFZxVHOgwW1Y9yHXujWe4PPaGsk+jZmTlq4tYSPi6ZYvSmCcb2m4Yrzln+yKP53Yfk1LJV56AsYbUt3DyGtEcTt8LWzpkPkqNcqbq7DVrIeNLZ9mHCPVOml7DA2RUhOLga75ftp4UNQ0VWJMdGgiuuKV3N+YIgh60tScFnu1wH+SkBb/tMZszBaf6SmqNYTGdPSy95W+OH06liZJCP+lrWY9bGz6NOIQ+3idtD2GhoitiSNzwNA0/SQvEU1TS7yS+xuTngrVYxanFkDtSZZuuq4jRLP/pTDro6zmk82LRGt76pC/tNbyVdNNbOuYbzjx3YL0X+axRQ8fWz7LfQy1TtoeSwPBx/TZrseSA4aqqfU+TOvmXMQ3ZP6+O15JZ2NOr+V0JeFJXJw7nMLQ8sYkolhmbz4KSj8p6HI/H7f4H4lJS+vsP3/Gix3n0h8ZaX4uAKHqzzB/4vew4auqu0sHs6H4p7dbnJv0NukpxppPMw6tTtqeDQ2mpvGiOLQazFj3Dtmf9i45X+WP+xhGG7Om3nglHY0J/g1thQT/F2hM96AxnxE0pnvQmM8IGhMAh6AxAXAIGhMAh6AxAXAIGhMAh6AxAXAIGhMAd4TwDcU4k56tBGZOAAAAAElFTkSuQmCC" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce1a92a4-a492-4e08-8d04-91e4229e9158" Selector="&lt;html app='chrome.exe' htmlwindowname='etbk_popup' title='.:::TransBank:::.' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <If DisplayName="If - La fecha debe ser posterior al mes actual" sap:VirtualizedContainerService.HintSize="436,322" sap2010:WorkflowViewState.IdRef="If_4">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">validateDate</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">validateError</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">La fecha debe ser posterior al mes actual</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="434,89" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="Tarjeta no valida" sap:VirtualizedContainerService.HintSize="526,478" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="Tarjeta no valida" sap:VirtualizedContainerService.HintSize="484,139" sap2010:WorkflowViewState.IdRef="ImageFound_3">
+            <ui:ImageFound.Found>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_72">validateCreditNumber</CSharpReference>
+              </OutArgument>
+            </ui:ImageFound.Found>
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAjCAYAAACuJpVrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVHhe7ZfhkcIgEIWvCP1jQ/rDUpixnYy1qL2YRjhYIC4IAS8Y7/beN+MoCbB5+2CJXxqIBeYKBuYKBuYKBuYKBuYKBuYKBuYKBuYKBuYKBuYKBuYKBuYKBuYK5mVzr2qnt5vnz2EYfY8K97M+bI56uPv2H+M+HPVW3XzrplXQMquL9VuRBTv3nQ/8mWRUMQaqaBG3PifMZfxWc0cdP9I/Mjcq2UnpUsqUs81JX9NxVM7CuHD/eZ783Bw/73Ca+kVHRRRnp9XFX58Y9bBPrl/MXPszGTqnzWkp6zoMZseze3UtfXjTzk1F80TPJMQk0/VrnZvj4kzJssbQYrG4e5NxpfPRjmHJtiY8LwIef+73Yyyd08Vnzl3vQ19zKaFhVeZEW1g72U2Pldw6N6cWJxjtKBvHFoTftURVWxKPj436Gapa+tDP3CiBtsRlRBNJEpKkO1rn5rwWJ2+u6Wp2ma0e4dtdbNGWxCuZ26SlD/3MtasxCCIBGdFEmpDc36jWuTn1OHFZzi0qAxlzMruW3W/SVo4XleXmPC2nY1l2LyRUaig5pYdO2iQwlCjz8Wfe9NJB7dLcnFfi5MYHfCx29rZpS+Kx0hu/ULXmaTkLzP0pVkRh14CurG8uL0vgraxn7lQW+5YeUOYDZRmsBcwVDMwVDMwVDMwVDMwVDMwVDMwVDMwVi9bffzubXyiKbO8AAAAASUVORK5CYII=" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fee68140-61bd-42b2-9e24-de69b725c8f8" Selector="&lt;wnd app='chrome.exe' omit:cls='MozillaWindowClass' title='.:::TransBank:::. *' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <If DisplayName="If - Tarjeta no valida" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_5">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">validateCreditNumber</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_78">validateError</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Tarjeta no valida</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+          </If>
+        </Sequence>
+        <If DisplayName="If - Rechazado Validate" sap:VirtualizedContainerService.HintSize="526,299" sap2010:WorkflowViewState.IdRef="If_6">
+          <If.Condition>
+            <InArgument x:TypeArguments="x:Boolean">
+              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">validateError != null</CSharpValue>
+            </InArgument>
+          </If.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If.Then>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create Rechazado By Validate" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="src\\automatic_billing\\application\\creditCard\\validateState\\CreateRechazadoByValidate.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="info_nomina">
+                  <CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_73">info_nomina</CSharpReference>
+                </OutArgument>
+                <InArgument x:TypeArguments="sd:DataRow" x:Key="case_row">
+                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">case_row</CSharpValue>
+                </InArgument>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="error_status">
+                  <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_80">error_status</CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="error_message">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_79">error_message</CSharpReference>
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="validateError">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">validateError</CSharpValue>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+          </If.Then>
+        </If>
+      </Sequence>
+    </TryCatch.Try>
+    <TryCatch.Catches>
+      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="572,421" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ActivityAction x:TypeArguments="s:Exception">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="376,352" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Error Control" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_16">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Boolean">
+                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_58">error_status</CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">error_message</CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78" xml:space="preserve">String.Format(
+	"[CREDIT CARD][VALIDATE ENTRIES][{0}]",
+	exception.Message
+)</CSharpValue>
+                      </InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">"Error ValidateStateFirst, Descripcion: "+exception.Message.ToString()</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </ActivityAction>
+      </Catch>
+    </TryCatch.Catches>
+    <TryCatch.Finally>
+      <Sequence DisplayName="Finally" sap2010:WorkflowViewState.IdRef="Sequence_9" />
+    </TryCatch.Finally>
+  </TryCatch>
+</Activity>

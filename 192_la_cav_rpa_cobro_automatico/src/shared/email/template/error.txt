@@ -1,0 +1,9 @@
+Estimados, 
+
+Se encontraron errores en el proceso, LaCAV RPA Cobro Automatico, a las {0} horas.
+
+Adicionalmente, este tuvo los siguientes errores:
+{1}
+
+Atentamente,
+Bot - LaCAV RPA Cobro Automatico.

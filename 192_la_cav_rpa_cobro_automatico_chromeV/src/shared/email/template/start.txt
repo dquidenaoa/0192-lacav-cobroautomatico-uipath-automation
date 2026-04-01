@@ -1,0 +1,6 @@
+Estimados, 
+
+Se inicia proceso, LaCAV RPA Cobro Automatico, a las {0} horas.
+
+Atentamente,
+Bot - LaCAV RPA Cobro Automatico.

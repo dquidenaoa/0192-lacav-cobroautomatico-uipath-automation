@@ -1,0 +1,9 @@
+SELECT DISTINCT
+	n.tipo as type
+FROM proceso_cobro.historial_info h
+JOIN proceso_cobro.nomina n
+ON h.id_nomina = n.id
+	WHERE 
+		to_timestamp(to_char((SELECT NOW() - INTERVAL '1 DAY'), 'DD-MM-YYYY 00:00:00'),'DD-MM-YYYY 00:00:00') < to_timestamp((tc_fecha),'DD-MM-YYYY HH24:MI:SS')
+	AND
+		h.estado = 3;

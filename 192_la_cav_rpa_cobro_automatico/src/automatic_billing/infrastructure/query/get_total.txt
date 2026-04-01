@@ -1,0 +1,6 @@
+SELECT 
+	'TOTAL' as nombre,
+	COUNT(id_nomina) as cantidad
+FROM 
+	proceso_cobro.historial_info
+WHERE created_at > LOCALTIMESTAMP

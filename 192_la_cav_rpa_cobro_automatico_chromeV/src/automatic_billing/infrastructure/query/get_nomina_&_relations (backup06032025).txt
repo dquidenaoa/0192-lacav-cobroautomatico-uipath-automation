@@ -1,0 +1,51 @@
+SELECT * FROM (
+	(SELECT
+		n.id, n.tipo, t.nombre as tipo_nombre, n.fecha,
+		n.cardcode, n.nboleta, n.tc_marca, m.nombre as tc_marca_nombre,
+		n.tc_numero, n.tc_mes, n.tc_ano, n.monto,
+		n.tc_cuotas, n.count
+	FROM proceso_cobro.nomina n
+		INNER JOIN proceso_cobro.tipo t on (n.tipo = t.id)
+		INNER JOIN proceso_cobro.marca m on (n.tc_marca = m.id)
+	WHERE
+		n.estado IN (1, 2, 4)
+	AND NOT EXISTS (
+        	SELECT 1 
+        	FROM proceso_cobro.historial_info h
+        	WHERE h.id_nomina = n.id
+        	AND h.pos_respuesta = 'APROBADA'
+	)
+	AND n.count < 3
+	AND n.tipo IN (1, 3)
+	)
+
+UNION ALL
+
+	(SELECT
+		n.id, n.tipo, t.nombre as tipo_nombre, n.fecha,
+		n.cardcode, n.nboleta, n.tc_marca, m.nombre as tc_marca_nombre,
+		n.tc_numero, n.tc_mes, n.tc_ano, n.monto,
+		n.tc_cuotas, n.count
+	FROM proceso_cobro.nomina n
+		INNER JOIN proceso_cobro.tipo t on (n.tipo = t.id)
+		INNER JOIN proceso_cobro.marca m on (n.tc_marca = m.id)
+	WHERE
+		n.estado IN (1, 2, 4)
+		AND n.tipo = 2
+		AND n.count < 3
+	AND NOT EXISTS (
+        	SELECT 1 
+        	FROM proceso_cobro.historial_info h
+        	WHERE h.id_nomina = n.id
+        	AND h.pos_respuesta = 'APROBADA'
+	)
+		
+		
+	)) a	
+ORDER BY 
+    CASE 
+        WHEN a.tipo IN (1, 3) THEN 1 
+        WHEN a.tipo = 2 THEN 2 
+    END, 
+    a.id
+LIMIT 1

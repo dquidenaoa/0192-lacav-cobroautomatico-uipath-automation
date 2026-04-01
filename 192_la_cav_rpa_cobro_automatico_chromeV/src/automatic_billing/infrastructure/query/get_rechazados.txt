@@ -1,0 +1,6 @@
+SELECT 
+	'RECHAZADOS' as nombre,
+	COUNT(tc_cod_resp) as cantidad
+FROM 
+	proceso_cobro.historial_info
+WHERE created_at > LOCALTIMESTAMP

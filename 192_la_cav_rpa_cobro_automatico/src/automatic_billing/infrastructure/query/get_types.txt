@@ -1,0 +1,4 @@
+SELECT 
+	nombre
+FROM 
+	proceso_cobro.tipo;

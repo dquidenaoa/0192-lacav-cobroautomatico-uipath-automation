@@ -1,0 +1,10 @@
+{
+	"port": "587",
+	"server": "smtp.office365.com",
+	"email": "procesosquality@bst.cl",
+	"password": "yznK#S3F",
+	"subject": "LaCav - RPA Cobros Automatico - ",
+	"to": "informe_ventas_bot@lacav.cl",
+	"cc": "rpa@bst.cl",
+	"bcc": ""
+}

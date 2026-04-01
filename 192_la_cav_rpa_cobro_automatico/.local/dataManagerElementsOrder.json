@@ -1,0 +1,32 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "nomina&StateMachine_1",
+        "repeat&State_4",
+        "boolResumen&Sequence_14",
+        "dtimResume&Sequence_14",
+        "path&Sequence_14",
+        "path_userProfile&Sequence_14",
+        "listType&Sequence_14",
+        "filepath_resumen&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "error_message",
+        "error_status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

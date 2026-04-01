@@ -1,0 +1,6 @@
+INSERT INTO proceso_cobro.historial_info
+(id_nomina, pos_respuesta, tc_cod_resp, tc_mot_rech, tc_fecha, estado, updated_at)
+SELECT cn.id, 'RECHAZADA', 219, 'MARCA DE TARJETA NO VALIDA', to_char(timezone('Chile/Continental', now()), 'DD-MM-YYYY HH24:MI:SS'), 3, now()
+FROM proceso_cobro.nomina cn
+WHERE cn.tc_marca = 99
+AND cn.estado = 1;

@@ -1,0 +1,8 @@
+#Folders UiPath
+.tmh/
+.entities/
+.settings/
+.templates/
+
+#Files UiPath
+bindings.json

@@ -1,0 +1,6 @@
+SELECT 
+	'APROBADOS' as nombre,
+	COUNT(tc_cod_aut) as cantidad
+FROM 
+	proceso_cobro.historial_info
+WHERE created_at > LOCALTIMESTAMP
